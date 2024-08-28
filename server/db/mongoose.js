@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise; // Use JS promise instead of Bluebird
 
-mongoose.connect('mongodb+srv://krish200599:L1jBNa54wb3ep5vK@cluster0.nf5fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(`${process.env.DB_LINK}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true // Add this line
 }).then(() => {
