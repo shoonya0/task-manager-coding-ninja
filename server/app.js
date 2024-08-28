@@ -12,7 +12,9 @@ const { List, Task } = require('./db/models/index.js');
 
 //Load middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: ['*']
+}));
 
 /* Route Handlers */
 
